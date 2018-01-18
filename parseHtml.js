@@ -6,8 +6,7 @@ var document;
 var html;
 
   fs.readFile('./index.txt', function(err, data) {
-    html = String(data);	
-    document = parser.parseFromString(html);
+    document = parser.parseFromString(String(data));
     myFunction(document);
     
   });
